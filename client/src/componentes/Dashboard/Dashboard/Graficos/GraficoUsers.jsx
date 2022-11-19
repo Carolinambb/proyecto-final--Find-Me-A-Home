@@ -18,7 +18,7 @@ export default function GraficoUsers() {
 
     const dataPie = [
         {
-          type: 'Usuarios',
+          type: 'Usuarios', 
           value: usuario,
         },
         {

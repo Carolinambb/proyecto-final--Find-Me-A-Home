@@ -68,7 +68,7 @@ export default function Dashboard() {
 			            <img src={refugio} width='30px'/>
 			            <h4>{refugios.length}</h4>
 			        </div>
-				</div> */}
+				</div> */} 
 			</div>
 			<div className="graficosDash">
 				<GraficoProductos />

@@ -47,7 +47,7 @@ export default function GraficoMascotas() {
       };
 
     return (
-        <Pie {...configPie} 
+        <Pie {...configPie}  
         style={{ 
             backgroundColor: '#c5f5f2',
         }} />      

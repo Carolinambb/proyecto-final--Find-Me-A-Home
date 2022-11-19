@@ -49,7 +49,7 @@ export default function GraficoProductos() {
           offset: '-0.5',
           content: '{name} {value}',
           style: {
-            fill: '#015c57',
+            fill: '#015c57', 
             fontSize: 14,
             textDecoration: 'bold',
             textAlign: 'center',
