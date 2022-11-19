@@ -7,6 +7,9 @@ import user from './img/user.png'
 import { useDispatch, useSelector } from 'react-redux'
 import { traerMascotas, traerProductos } from '../../../redux/actions'
 import ListaProductos from '../ListaProductos/ListaProductos'
+import GraficoProductos from './Graficos/GraficoProductos'
+import GraficoMascotas from './Graficos/GraficoMascotas'
+import GraficoUsers from './Graficos/GraficoUsers'
 // import ListaMascotas from '../ListaMascotas/ListaMascotas'
 // import ListaUsuarios from '../ListaUsuarios/ListaUsuarios'
 // import ListaRefugios from '../ListaRefugios/ListaRefugios'
@@ -67,6 +70,11 @@ export default function Dashboard() {
 			        </div>
 				</div> */}
 			</div>
+			<div className="graficosDash">
+				<GraficoProductos />
+				<GraficoMascotas />
+			</div>
+				<GraficoUsers />
 
 			{/* -------- PRODUCTOS -----------  */}
 			 {/* <div className="prodMain_dashb">
