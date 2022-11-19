@@ -7,6 +7,7 @@ import { addToCart } from "../../redux/actions/index";
 // import { ToastContainer, toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 
+
 import {
   detalleMascota,
   limpiarEstadoDetalle,
@@ -15,16 +16,9 @@ import Loader from "../Loader/Loader";
 
 export default function Detalle() {
   const dispatch = useDispatch();
-  const history = useHistory();
+ 
   const params = useParams();
   const mascotas = useSelector((state) => state.detalle);
-/* 
-  //add to cart
-function addToCart(id){
-  const item = mascotas.find((mascota) => mascota.id === id)
-  console.log(item)
-}
- */
   useEffect(() => {
     dispatch(detalleMascota(params.id));
     return () => {
@@ -61,10 +55,6 @@ function addToCart(id){
   function handleAddToCart(){
       mascotas.quantitySelected = quantitySelected;
       dispatch(addToCart(mascotas));
-     /*  notifyOK(); */
-      setTimeout(() => {
-          history.push("/")
-      }, 3000);
   };
 
   // const notifyOK = () => {
@@ -80,6 +70,7 @@ function addToCart(id){
       setTimeout(() => {
         history.push("/carrito")
       }, 3000);
+
   }
 
   return (
@@ -119,36 +110,6 @@ function addToCart(id){
             <NavLink to="/formAdopcion" className="link">
               <button className="adopta">Adopta</button>
             </NavLink>
-          </div>
-{/* carrito */}
-          <div> 
-          <form action='/carrito/agregar/${id}' name="form" method="post">
-                                
-                                <div>
-                                    <div>
-                                        <div>
-                                            <button  onClick={e => restar(e)} value> - </button>
-                                            {(mascotas.stock <= 0) ? <span>0</span>  : <span >{quantitySelected}</span>}
-                                            <button  onClick={e => sumar(e)} value> + </button>
-                                        </div>
-                                        
-                                    </div>
-
-                                    {(mascotas.stock <= 0) ?
-                                         (<div >
-                                         <button  id="comprar">Buy now</button>
-                                         <button  >Add to cart</button>
-                                         </div>)  
-                                         : 
-                                         (<div >
-                                         <button type="button" onClick={handleBuyCart}  id="comprar">Buy now</button>
-                                         <button type="button" onClick={handleAddToCart} id='agregarAlCarrito'>Add to cart</button>
-                                        </div>)
-                                    }
-                                   
-                                </div>
-                               
-                            </form>
           </div>
         </div>
         
