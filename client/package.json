@@ -24,6 +24,7 @@
         "redux-thunk": "^2.3.0",
         "stream": "^0.0.2",
         "web-vitals": "^2.1.4"
+        
     },
     "scripts": {
         "start": "react-scripts --openssl-legacy-provider start",
@@ -37,6 +38,7 @@
             "react-app/jest"
         ]
     },
+    
     "browserslist": {
         "production": [
             ">0.2%",
